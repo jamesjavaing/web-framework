@@ -1,0 +1,6 @@
+server:
+  port: 7777
+spring:
+  thymeleaf:
+      mode: HTML5
+      cache: false
