@@ -14,13 +14,32 @@
     'BlurAdmin.pages.form',
     'BlurAdmin.pages.tables',
     'BlurAdmin.pages.profile',
+    'BlurAdmin.pages.documents',
+    'BlurAdmin.pages.demos'
   ])
       .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
     $urlRouterProvider.otherwise('/dashboard');
-
+    baSidebarServiceProvider.addStaticItem({
+      title: 'documents',
+      icon: 'ion-ios-more',
+      subMenu: [{
+          title: 'start',
+          icon: 'ion-ios-more',
+          stateRef:'start'
+        }]
+    });
+    baSidebarServiceProvider.addStaticItem({
+      title: 'demo1',
+      icon: 'ion-ios-more',
+      subMenu: [{
+        title: 'demo1',
+        icon: 'ion-ios-more',
+        stateRef:'demo1'
+      }]
+    });
   }
 
 })();
