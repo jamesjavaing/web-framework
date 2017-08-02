@@ -6,10 +6,15 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.tables')
-      .controller('TablesPageCtrl', TablesPageCtrl);
+      .controller('TablesPageCtrl',TablesPageCtrl);
 
   /** @ngInject */
-  function TablesPageCtrl($scope, $filter, editableOptions, editableThemes) {
+  function TablesPageCtrl($scope, $filter, $http, editableOptions, editableThemes) {
+    $http.get('http://localhost:8033/demo/demo1').success(function(data){
+      console.log(data)
+    }).error(function(){
+      
+    })
 
     $scope.smartTablePageSize = 10;
 
@@ -703,7 +708,16 @@
       };
       $scope.users.push($scope.inserted);
     };
-
+    $scope.ajaxData=[];
+    $scope.getAjaxData=function(){
+      $http.get('http://localhost:8033/ng1/ajaxTableData').success(function(data){
+            console.log(data)
+            $scope.ajaxData=data;
+      }).error(function(){
+        
+      })
+    }
+  
     editableOptions.theme = 'bs3';
     editableThemes['bs3'].submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>';
     editableThemes['bs3'].cancelTpl = '<button type="button" ng-click="$form.$cancel()" class="btn btn-default btn-with-icon"><i class="ion-close-round"></i></button>';
