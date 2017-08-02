@@ -4,3 +4,4 @@ spring:
   thymeleaf:
       mode: HTML5
       cache: false
+      classpath: /web/release/
