@@ -5,11 +5,11 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme', [
+  angular.module('WebFramework.theme', [
       'toastr',
       // 'textAngular', // Wysiwyg editor 依赖 rangy
-      'BlurAdmin.theme.components',
-      'BlurAdmin.theme.inputs'
+      'WebFramework.theme.components',
+      'WebFramework.theme.inputs'
   ]);
 
 })();

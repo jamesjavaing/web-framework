@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.form', ['ui.select'])
+  angular.module('WebFramework.pages.form', ['ui.select'])
       .config(routeConfig);
 
   /** @ngInject */
