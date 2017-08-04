@@ -12,8 +12,8 @@ var gutil = require('gulp-util');
  *  The main paths of your project handle these with care
  */
 exports.paths = {
-  src: 'src',
-  dist: 'release',
+  src: 'src/main/resources/templates/src',
+  dist: 'src/main/resources/templates/release',
   devDist: 'dev-release',
   tmp: '.tmp',
   e2e: 'e2e'
