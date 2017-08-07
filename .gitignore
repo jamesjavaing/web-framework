@@ -50,3 +50,5 @@ gulp.1
 build
 .tmp
 /bower_components
+src/main/resources/templates/release/
+target/
